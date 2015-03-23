@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AAA & CF :: Game Of Life</title>
+    <script src="GoL_Driver.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="GoL_Styles.css" />
+</head>
+<body>
+<h3><span id="heading">Emerging Technologies :: Conway's Game of Life</span></h3>
+<div id="inputArea">
+<table>
+<tr><td>
+<fieldset>
+<legend>Simulations Meta Settings</legend>
+<table>
+<tr><td>Size of Field:</td><td><input type="number" id="gridEdge" value="10"/></td></tr>
+<tr><td>Number of Initial Live Cells:</td><td><input type="number" id="liveCells" value="5"/></td></tr>
+<tr><td>Cell Spread Factor:</td><td><input type="number" id="cellSpread" value="10"/></td></tr>
+</table>
+</fieldset>
+</td><td>
+<fieldset>
+<legend>Simulations Rules</legend>
+<table>
+<tr><td>Death by Loneliness (Underpopulation)</td><td><input type="number" id="lonelyDeath" value="2"/></td></tr>
+<tr><td>Keep on Living (No change):</td><td>Min:&nbsp<input type="number" id="minLive" value="2"/></td><td>Max:&nbsp<input type="number" id="maxLive" value="3"/></td></tr>
+<tr><td>Death by Crowding (Overpopulation):</td><td><input type="number" id="crowdedDeath" value="3"/></td></tr>
+<tr><td>Resurrection (Become alive!):</td><td><input type="number" id="rezParam" value="3"/></td></tr>
+</table>
+</fieldset>
+</td><td>
+<table><tr><td><input id="beginButton" type="button" value="Simulate" onclick="startSimulation()"/></td></tr><tr><td><input id="endButton" type="button" value="Stop Simulation" onclick="stopSimulation()"/></td></tr></table></td>
+</tr></table>
+</div><br />
+<div id="infoArea"></div><br />
+<img id="liveTile" src="liveTile.jpg" hidden="true"></image>
+<div id="displayArea">
+</div><br />
+</body>
+</html>
